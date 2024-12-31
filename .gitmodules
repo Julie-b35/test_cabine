@@ -1,3 +1,4 @@
 [submodule "app"]
 	path = app
 	url = github.com:Julie-b35/PyCabine.git
+	branch = develop
