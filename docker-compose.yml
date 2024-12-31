@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  pycabine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+    environment:
+      - PYTHONUNBUFFERED=1
