@@ -15,6 +15,6 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Contruire the test_cabine Docker image
       run: |
-        docker build . --tag ghcr.io/julie-b35/test_cabine:latest
-        docker run ghcr.io/julie-b35/test_cabine:latest
-        docker push ghcr.io/julie-b35/test_cabine:latest
+        docker build . --tag ghcr.io/julie-b35/TestPyCabine:latest
+        docker run ghcr.io/julie-b35/TestPyCabine:latest
+        docker push ghcr.io/julie-b35/TestPyCabine:latest
