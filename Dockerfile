@@ -45,4 +45,4 @@ RUN cd .. \
 RUN pip install -r /TestPyCabine/app/requirements.txt --root-user-action=ignore
 
 # Définir l'entrée du conteneur
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["bash"]
