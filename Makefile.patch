@@ -1,0 +1,23 @@
+--- Makefile	2024-12-31 23:21:57.452294428 +0000
++++ Makefilenew	2024-12-31 23:18:52.443336838 +0000
+@@ -135,13 +135,13 @@
+ ifeq ($(DESTDIR),)
+ 	ldconfig
+ endif
+-	@if which $(PYTHON); then cd PY_RGPIO && $(PYTHON) setup.py -q install $(PYINSTALLARGS) || echo "*** install of Python3 rgpio.py failed ***"; fi
+-	@if which swig $(PYTHON); then \
+-		cd PY_LGPIO && \
+-		$(PYTHON) setup.py build_ext $(PYBUILDARGS) && \
+-		$(PYTHON) setup.py -q install $(PYINSTALLARGS) || \
+-		echo "*** install of Python3 lgpio.py failed ***"; \
+-	fi
++#	@if which $(PYTHON); then cd PY_RGPIO && $(PYTHON) setup.py -q install $(PYINSTALLARGS) || echo "*** install of Python3 rgpio.py failed ***"; fi
++#	@if which swig $(PYTHON); then \
++#		cd PY_LGPIO && \
++#		$(PYTHON) setup.py build_ext $(PYBUILDARGS) && \
++#		$(PYTHON) setup.py -q install $(PYINSTALLARGS) || \
++#		echo "*** install of Python3 lgpio.py failed ***"; \
++#	fi
+ 
+ uninstall:
+ 	rm -f $(DESTDIR)$(includedir)/lgpio.h
