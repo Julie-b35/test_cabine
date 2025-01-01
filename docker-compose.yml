@@ -5,8 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ./app:/app
     environment:
       - PYTHONUNBUFFERED=1
     entrypoint: entrypoint.sh

@@ -14,11 +14,11 @@ RUN apt-get update && apt-get install -y \
     swig \
     git 
 
+# Cloner le dépôt principal avec les sous-modules 
+RUN git clone --recurse-submodules https://github.com/Julie-b35/TestPyCabine.git /app
 
 # Copier les fichiers nécessaires.
-COPY Makefile.patch /app/Makefile.patch
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-COPY ./app/requirements.txt /app/requirements.txt
 
 # Rendre le script d'entrée exécutable
 RUN chmod +x /usr/local/bin/entrypoint.sh
