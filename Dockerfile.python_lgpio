@@ -36,7 +36,7 @@ RUN cd / && git clone https://github.com/joan2937/lg.git \
     && pip install --upgrade pip lgpio --root-user-action=ignore 
 
 # Nettoyer les fichiers inutiles
-RUN rm -rf /lg 
+RUN rm -rvf /lg && rm -rvf /app/.git 
 
 # Installer les dépendances python nécessaires
 RUN pip install -r /app/requirements.txt --root-user-action=ignore
