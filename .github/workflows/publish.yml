@@ -3,7 +3,7 @@ name: publish
 on: ["push"]
 jobs:
 
-  publish-test_cabine-docker-image:
+  publish-python_lgpio-docker-image:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -13,8 +13,8 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Contruire the test_cabine Docker image
+    - name: Contruire the python_lgpio Docker image
       run: |
-        docker build . --tag ghcr.io/julie-b35/test_cabine:latest
-        docker run ghcr.io/julie-b35/test_cabine:latest
-        docker push ghcr.io/julie-b35/test_cabine:latest
+        docker build -f Dockerfile.python_lgpio . --tag ghcr.io/julie-b35/python_lgpio:latest
+        docker run ghcr.io/julie-b35/python_lgpio:latest
+        docker push ghcr.io/julie-b35/python_lgpio:latest
