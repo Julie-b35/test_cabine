@@ -1,4 +1,4 @@
-FROM python_lgpio:latest
+FROM ghcr.io/julie-b35/python_lgpio:latest
 LABEL version="1.0" maintainer="Julie Brindejont <julie.brindejont@gmail.com>"
 
 # Copier les fichiers nécessaires.

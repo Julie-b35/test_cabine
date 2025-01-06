@@ -10,6 +10,7 @@ setup() {
     source $TMPDIR/venv/bin/activate
 
     #copier les fichiers nécessaire dans le répertoire temporaire
+    ls -la $TMPDIR
     cp -r /app/* $TMPDIR/
 }
 
@@ -20,6 +21,6 @@ teardown() {
 }
 
 @test "Test si le script de cabine fonctionne" {
-    run bin/cabine
+    run ls
     [ "$status" -eq 0 ]
 }

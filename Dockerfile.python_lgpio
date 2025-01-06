@@ -41,6 +41,9 @@ RUN rm -rvf /lg && rm -rvf /app/.git
 # Installer les dépendances python nécessaires
 RUN pip install -r /app/requirements.txt --root-user-action=ignore
 
+# Installation de pytest
+RUN pip install -U pytest
+
 # Définir l'entrée du conteneur
 ENTRYPOINT ["bash"]
 

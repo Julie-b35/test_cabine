@@ -10,8 +10,8 @@ cleanup() {
 trap cleanup SIGINT SIGTERM
 
 # Début des tests
-#bats tests/cabine.bats
-ls
+bats tests/cabine.bats
+
 # Lancer la commande qui garde le conteneur actif
 tail -f /dev/null &
 TAIL_PID=$!
